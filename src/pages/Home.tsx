@@ -2,9 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { GraduationCap, Users, MapPin, BookOpen, Award, Star } from "lucide-react";
-import heroImage from "@/assets/college-hero.jpg";
+import heroImage from "@/assets/venkateswara-campus.jpg";
 import studentsImage from "@/assets/students-study.jpg";
-import libraryImage from "@/assets/library-interior.jpg";
 
 const Home = () => {
   const stats = [
