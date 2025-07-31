@@ -47,6 +47,7 @@ const Branches = () => {
         "Strong alumni network",
         "Modern infrastructure",
       ],
+      mapsLink: "https://www.google.com/maps/place/Sri+Gayatri+Junior+College/@19.6922828,61.0418276,4z/data=!4m7!3m6!1s0x3a3943392ed94569:0x13017843807946a5!8m2!3d21.0680074!4d82.7525294!15sCihTcmkgR2F5YXRyaSBKdW5pb3IgQ29sbGVnZSBWaXNha2hhcGF0bmFtIgOIAQGSAQ5qdW5pb3JfY29sbGVnZaoBgAEKDS9nLzExYzN3djJtYnMQASoeIhpzcmkgZ2F5YXRyaSBqdW5pb3IgY29sbGVnZSgAMh8QASIb2Ogo_Doe6NVD0BPtwurTnOuMeD8uJBF8FMPgMiwQAiIoc3JpIGdheWF0cmkganVuaW9yIGNvbGxlZ2UgdmlzYWtoYXBhdG5hbeABAA!16s%2Fg%2F11h28jntxv?entry=tts&g_ep=EgoyMDI1MDcyOC4wIPu8ASoASAFQAw%3D%3D&skid=d608011e-4e7a-4a87-b69d-68785c1047fd",
     },
     {
       id: "gajuwaka",
@@ -72,6 +73,7 @@ const Branches = () => {
         "Industry connections",
         "Practical learning approach",
       ],
+      mapsLink: "https://www.google.com/maps/place/Sri+Gayatri+Junior+College/@19.6922828,61.0418276,4z/data=!4m7!3m6!1s0x3a39690f9aaaaa9f:0x7bb0f98f1f4fcd83!8m2!3d17.6820332!4d83.2016888!15sCihTcmkgR2F5YXRyaSBKdW5pb3IgQ29sbGVnZSBWaXNha2hhcGF0bmFtIgOIAQGSAQdjb2xsZWdlqgGAAQoNL2cvMTFjM3d2Mm1icxABKh4iGnNyaSBnYXlhdHJpIGp1bmlvciBjb2xsZWdlKAAyHxABIhvY6Cj8Oh7o1UPQE-3C6tOc64x4Py4kEXwUw-AyLBACIihzcmkgZ2F5YXRyaSBqdW5pb3IgY29sbGVnZSB2aXNha2hhcGF0bmFt4AEA!16s%2Fg%2F11bw6pkwgs?entry=tts&g_ep=EgoyMDI1MDcyOC4wIPu8ASoASAFQAw%3D%3D&skid=4b6973f8-eaad-44aa-bb4f-9538ff63d195",
     },
     {
       id: "madhurawada",
@@ -98,6 +100,7 @@ const Branches = () => {
         "Modern facilities",
         "Tech-enabled learning",
       ],
+      mapsLink: "https://www.google.com/maps/place/Sri+Gayatri+junior+college/@19.6922828,61.0418276,4z/data=!4m7!3m6!1s0x3a395bc68c5e7887:0x1b7d8da67f2e0dde!8m2!3d17.8281051!4d83.3482869!15sCihTcmkgR2F5YXRyaSBKdW5pb3IgQ29sbGVnZSBWaXNha2hhcGF0bmFtIgOIAQGSAQdjb2xsZWdlqgGAAQoNL2cvMTFjM3d2Mm1icxABKh4iGnNyaSBnYXlhdHJpIGp1bmlvciBjb2xsZWdlKAAyHxABIhvY6Cj8Oh7o1UPQE-3C6tOc64x4Py4kEXwUw-AyLBACIihzcmkgZ2F5YXRyaSBqdW5pb3IgY29sbGVnZSB2aXNha2hhcGF0bmFt4AEA!16s%2Fg%2F11rck2nkdf?entry=tts&g_ep=EgoyMDI1MDcyOC4wIPu8ASoASAFQAw%3D%3D&skid=8cbc5b42-6489-4a57-b9c8-425a9424f148",
     },
     {
       id: "nad",
@@ -124,13 +127,14 @@ const Branches = () => {
         "Easy accessibility",
         "Experienced faculty",
       ],
+      mapsLink: "https://www.google.com/maps/place/Sri+Gayatri+Junior+College/@19.6922828,61.0418276,4z/data=!4m6!3m5!1s0x3a3967e05914f529:0x325e721efe73a1f4!8m2!3d17.7444256!4d83.2309419!16s%2Fg%2F11j00851cd?entry=ttu&g_ep=EgoyMDI1MDcyOC4wIKXMDSoASAFQAw%3D%3D",
     },
     {
       id: "venkateswara",
       name: "Sri Venkateswara Junior College",
       location: "Dwaraka Nagar, Visakhapatnam",
-      address: "Plot No. 56-78, Dwaraka Nagar Main Road, Visakhapatnam - 530016",
-      phone: "+91 891 678 9012",
+      address: "Door No. SYNO-155/1B G Tallavalasa, Bheemunipatnam Mandal, Visakhapatnam - 531162",
+      phone: "+91 93815 40655",
       email: "info@srivenkateswarajc.edu.in",
       established: "2025",
       students: "300+",
@@ -152,6 +156,7 @@ const Branches = () => {
         "Modern campus facilities",
       ],
       isSisterCompany: true,
+      mapsLink: "https://www.google.com/maps/place/Sri+Gayatri+Junior+College/@19.6922828,61.0418276,4z/data=!4m7!3m6!1s0x3a3943392ed94569:0x13017843807946a5!8m2!3d21.0680074!4d82.7525294!15sCihTcmkgR2F5YXRyaSBKdW5pb3IgQ29sbGVnZSBWaXNha2hhcGF0bmFtIgOIAQGSAQ5qdW5pb3JfY29sbGVnZaoBgAEKDS9nLzExYzN3djJtYnMQASoeIhpzcmkgZ2F5YXRyaSBqdW5pb3IgY29sbGVnZSgAMh8QASIb2Ogo_Doe6NVD0BPtwurTnOuMeD8uJBF8FMPgMiwQAiIoc3JpIGdheWF0cmkganVuaW9yIGNvbGxlZ2UgdmlzYWtoYXBhdG5hbeABAA!16s%2Fg%2F11h28jntxv?entry=tts&g_ep=EgoyMDI1MDcyOC4wIPu8ASoASAFQAw%3D%3D&skid=d608011e-4e7a-4a87-b69d-68785c1047fd",
     },
   ];
 
@@ -326,7 +331,7 @@ const Branches = () => {
                         <Link to="/contact">Contact This Branch</Link>
                       </Button>
                       <Button variant="outline" className="w-full border-primary-foreground text-black hover:bg-gray-200 hover:text-black" asChild>
-                        <a href={`https://maps.google.com/?q=${encodeURIComponent(branch.address)}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                        <a href={branch.mapsLink} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                           <ExternalLink className="h-4 w-4" />
                           Get Directions
                         </a>
@@ -352,7 +357,7 @@ const Branches = () => {
                   <Link to="/contact">Schedule a Visit</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="border-primary-foreground text-black hover:bg-gray-200 hover:text-black" asChild>
-                  <a href="https://maps.google.com/?q=Sri+Gayatri+Junior+College+Visakhapatnam" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <a href="https://www.google.com/maps/place/Sri+Gayatri+Junior+College/@19.6922828,61.0418276,4z/data=!4m7!3m6!1s0x3a3943392ed94569:0x13017843807946a5!8m2!3d21.0680074!4d82.7525294!15sCihTcmkgR2F5YXRyaSBKdW5pb3IgQ29sbGVnZSBWaXNha2hhcGF0bmFtIgOIAQGSAQ5qdW5pb3JfY29sbGVnZaoBgAEKDS9nLzExYzN3djJtYnMQASoeIhpzcmkgZ2F5YXRyaSBqdW5pb3IgY29sbGVnZSgAMh8QASIb2Ogo_Doe6NVD0BPtwurTnOuMeD8uJBF8FMPgMiwQAiIoc3JpIGdheWF0cmkganVuaW9yIGNvbGxlZ2UgdmlzYWtoYXBhdG5hbeABAA!16s%2Fg%2F11h28jntxv?entry=tts&g_ep=EgoyMDI1MDcyOC4wIPu8ASoASAFQAw%3D%3D&skid=d608011e-4e7a-4a87-b69d-68785c1047fd" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                     <ExternalLink className="h-4 w-4" />
                     Get Directions
                   </a>
