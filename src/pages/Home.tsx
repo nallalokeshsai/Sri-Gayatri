@@ -50,7 +50,7 @@ const Home = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6 drop-shadow-lg">
             Sri Gayatri
             <br />
-            <span className="text-secondary">Junior College</span>
+            <span className="text-secondary">Junior Colleges</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 drop-shadow-md">
             Nurturing Excellence in Intermediate Education across Visakhapatnam
