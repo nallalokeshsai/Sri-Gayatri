@@ -20,18 +20,18 @@ const Contact = () => {
       icon: Phone,
       title: "Phone Numbers",
       details: [
-        "Main Office: +91 891 234 5678",
-        "Admissions: +91 891 234 5679",
-        "Academic: +91 891 234 5680"
+        "Main Office: +91 93468 73728",
+        "Admissions: 0891-2554555",
+        "Academic: +91 93815 40655"
       ]
     },
     {
       icon: Mail,
       title: "Email Addresses",
       details: [
-        "General: info@srigayatrijc.edu.in",
-        "Admissions: admissions@srigayatrijc.edu.in",
-        "Principal: principal@srigayatrijc.edu.in"
+        "General: info@srigayatri.com",
+        "Admissions: admissions@srigayatri.co.in",
+        "Principal: principal@srigayatri.co.in"
       ]
     },
     {
@@ -47,7 +47,7 @@ const Contact = () => {
       icon: MapPin,
       title: "Head Office",
       details: [
-        "Door No. 12-34-56, Main Road",
+        "Door No. 9-17-19, Amarnagar",
         "Asilmetta, Visakhapatnam - 530003",
         "Andhra Pradesh, India"
       ]
@@ -211,10 +211,10 @@ const Contact = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "Asilmetta", phone: "+91 891 234 5678", email: "asilmetta@srigayatrijc.edu.in" },
-              { name: "Gajuwaka", phone: "+91 891 345 6789", email: "gajuwaka@srigayatrijc.edu.in" },
-              { name: "Madhurawada", phone: "+91 891 456 7890", email: "madhurawada@srigayatrijc.edu.in" },
-              { name: "NAD Junction", phone: "+91 891 567 8901", email: "nad@srigayatrijc.edu.in" }
+              { name: "Asilmetta", phone: "+91 93468 73728", email: "vspasl@srigayatri.com" },
+              { name: "Gajuwaka", phone: "+91 99632 65121", email: "vspgwk@srigayatri.com" },
+              { name: "Madhurawada", phone: "+91 94917 18779", email: "vspmwd@srigayatri.com" },
+              { name: "NAD Junction", phone: "+91 93927 49394", email: "vspnad@srigayatri.com" }
             ].map((branch, index) => (
               <Card key={index} className="shadow-card">
                 <CardContent className="p-6">
@@ -286,7 +286,7 @@ const Contact = () => {
                 For urgent matters or emergencies, please contact our 24/7 helpline
               </p>
               <div className="text-xl font-semibold">
-                📞 +91 891 999 9999
+                📞 +91 93815 40655
               </div>
             </CardContent>
           </Card>

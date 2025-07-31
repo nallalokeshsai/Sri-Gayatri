@@ -11,10 +11,6 @@ const Home = () => {
     { icon: Users, label: "Students", value: "2000+" },
     { icon: GraduationCap, label: "Faculty", value: "150+" },
     { icon: MapPin, label: "Branches", value: "4" },
-
-
-
-    
     { icon: Award, label: "Years", value: "25+" },
   ];
 

@@ -1,28 +1,25 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Users, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Users,
   Car,
   Bus,
   Building,
   GraduationCap,
-  ExternalLink
+  ExternalLink,
 } from "lucide-react";
+
 import asilmettaCampus from "@/assets/asilmetta-campus.jpg";
 import gajuwakaCampus from "@/assets/gajuwaka-campus.jpg";
 import madhurawadaCampus from "@/assets/madhurawada-campus.jpg";
 import nadCampus from "@/assets/nad-campus.jpg";
 import venkateswaraCampus from "@/assets/venkateswara-campus.jpg";
-import libraryImage from "@/assets/library-interior.jpg";
-import classroomImage from "@/assets/classroom-modern.jpg";
-import cafeteriaImage from "@/assets/cafeteria.jpg";
-import sportsImage from "@/assets/sports-ground.jpg";
 
 const Branches = () => {
   const branches = [
@@ -30,65 +27,60 @@ const Branches = () => {
       id: "asilmetta",
       name: "Asilmetta Branch",
       location: "Asilmetta, Visakhapatnam",
-      address: "Door No. 12-34-56, Main Road, Asilmetta, Visakhapatnam - 530003",
-      phone: "+91 891 234 5678",
-      email: "asilmetta@srigayatrijc.edu.in",
+      address: "Door No. 9-17-9, Amarnagar, CBM Compound, Asilmetta, Visakhapatnam - 530003",
+      phone: "+91 93468 73728",
+      email: "vspasl@srigayatri.com",
       established: "2012",
       students: "600+",
       courses: ["MPC", "BiPC", "MEC", "CEC"],
       image: asilmettaCampus,
       facilities: [
-        "Air-conditioned classrooms",
+        "Well lit classrooms",
         "Physics & Chemistry labs",
-        "Computer lab with 40 systems",
-        "Library with 5000+ books",
-        "Sports ground",
-        "Cafeteria"
+        "Library with 1000+ books",
+        "Cafeteria",
       ],
-      timings: "6:00 AM - 6:00 PM",
+      timings: "8:00 AM - 5:00 PM",
       highlights: [
         "Our flagship campus",
         "Excellent board exam results",
         "Strong alumni network",
-        "Modern infrastructure"
+        "Modern infrastructure",
       ],
-      galleryImages: [libraryImage, classroomImage, sportsImage]
     },
     {
       id: "gajuwaka",
       name: "Gajuwaka Branch",
       location: "Gajuwaka, Visakhapatnam",
-      address: "Plot No. 78-90, Industrial Estate Road, Gajuwaka, Visakhapatnam - 530026",
-      phone: "+91 891 345 6789",
-      email: "gajuwaka@srigayatrijc.edu.in",
+      address: "Chaitanya Nagar, Old Gajuwaka, Visakhapatnam - 530026",
+      phone: "+91 99632 65121",
+      email: "vspgwk@srigayatri.com",
       established: "2015",
       students: "500+",
       courses: ["MPC", "BiPC", "MEC", "CEC"],
       image: gajuwakaCampus,
       facilities: [
-        "Smart classrooms",
         "Well-equipped laboratories",
         "Digital library",
-        "Indoor sports facility",
         "Student parking",
-        "Medical room"
+        "Medical room",
       ],
-      timings: "6:00 AM - 6:00 PM",
+      timings: "8:00 AM - 5:00 PM",
       highlights: [
         "Industrial area location",
         "Focus on technical courses",
         "Industry connections",
-        "Practical learning approach"
+        "Practical learning approach",
       ],
-      galleryImages: [classroomImage, cafeteriaImage, libraryImage]
     },
     {
       id: "madhurawada",
       name: "Madhurawada Branch",
       location: "Madhurawada, Visakhapatnam",
-      address: "Survey No. 123, IT SEZ Road, Madhurawada, Visakhapatnam - 530048",
-      phone: "+91 891 456 7890",
-      email: "madhurawada@srigayatrijc.edu.in",
+      address:
+        "Plot No. 175, Vizianagar Teachers Colony, AP Housing Board Colony, Kommadi, Madhurawada, Visakhapatnam - 530048",
+      phone: "+91 93904 53898",
+      email: "vspmwd@srigayatri.com",
       established: "2020",
       students: "450+",
       courses: ["MPC", "BiPC"],
@@ -96,26 +88,24 @@ const Branches = () => {
       facilities: [
         "Modern architecture",
         "Advanced science labs",
-        "IT lab with latest computers",
-        "Spacious library",
-        "Outdoor sports complex",
-        "Student lounge"
+        "Sports ground",
+        "Hostel facility",
       ],
-      timings: "6:00 AM - 6:00 PM",
+      timings: "8:00 AM - 9:00 PM",
       highlights: [
         "Newest campus",
         "IT corridor location",
         "Modern facilities",
-        "Tech-enabled learning"
+        "Tech-enabled learning",
       ],
-      galleryImages: [sportsImage, libraryImage, classroomImage]
     },
     {
       id: "nad",
       name: "NAD Branch",
       location: "NAD Junction, Visakhapatnam",
-      address: "Door No. 45-67-89, NAD Main Road, Visakhapatnam - 530016",
-      phone: "+91 891 567 8901",
+      address:
+        "Door No. 58-21/49/2, Beside Amar Concept School, Seetharamaraju Nagar, Butchirajupalem, NAD, Visakhapatnam - 530016",
+      phone: "+91 93927 49394",
       email: "nad@srigayatrijc.edu.in",
       established: "2017",
       students: "400+",
@@ -123,20 +113,17 @@ const Branches = () => {
       image: nadCampus,
       facilities: [
         "Centrally located campus",
-        "Commerce lab",
-        "Computer center",
         "Reading hall",
         "Seminar hall",
-        "Hostel facility nearby"
+        "Hostel facility nearby",
       ],
-      timings: "6:00 AM - 6:00 PM",
+      timings: "8:00 AM - 5:00 PM",
       highlights: [
         "Central location",
         "Commerce specialization",
         "Easy accessibility",
-        "Experienced faculty"
+        "Experienced faculty",
       ],
-      galleryImages: [cafeteriaImage, classroomImage, sportsImage]
     },
     {
       id: "venkateswara",
@@ -145,28 +132,27 @@ const Branches = () => {
       address: "Plot No. 56-78, Dwaraka Nagar Main Road, Visakhapatnam - 530016",
       phone: "+91 891 678 9012",
       email: "info@srivenkateswarajc.edu.in",
-      established: "2018",
-      students: "550+",
+      established: "2025",
+      students: "300+",
       courses: ["MPC", "BiPC", "MEC", "CEC"],
       image: venkateswaraCampus,
       facilities: [
         "State-of-the-art classrooms",
         "Advanced science laboratories",
         "Digital learning center",
-        "Library with 6000+ books",
+        "Library with 1000+ books",
         "Sports complex",
-        "Cafeteria"
+        "Cafeteria",
       ],
-      timings: "6:00 AM - 6:00 PM",
+      timings: "8:00 AM - 9:00 PM",
       highlights: [
         "Sister institution to Sri Gayatri",
         "Focus on holistic education",
         "Strong academic performance",
-        "Modern campus facilities"
+        "Modern campus facilities",
       ],
-      galleryImages: [libraryImage, classroomImage, cafeteriaImage],
-      isSisterCompany: true
-    }
+      isSisterCompany: true,
+    },
   ];
 
   return (
@@ -182,7 +168,7 @@ const Branches = () => {
           </p>
         </div>
 
-        {/* Branch Overview */}
+        {/* Overview Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
           <Card className="text-center shadow-card">
             <CardContent className="p-6">
@@ -214,17 +200,12 @@ const Branches = () => {
           </Card>
         </div>
 
-        {/* Branch Details */}
+        {/* Branch Cards */}
         <div className="space-y-12">
-          {branches.map((branch, index) => (
+          {branches.map((branch) => (
             <Card key={branch.id} className="shadow-card overflow-hidden">
-              {/* Branch Hero Image */}
               <div className="relative h-64 overflow-hidden">
-                <img 
-                  src={branch.image} 
-                  alt={`${branch.name} campus`}
-                  className="w-full h-full object-cover"
-                />
+                <img src={branch.image} alt={`${branch.name} campus`} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-black/30" />
                 <div className="absolute bottom-4 left-4">
                   <h2 className="text-3xl font-bold text-white mb-2">{branch.name}</h2>
@@ -244,7 +225,6 @@ const Branches = () => {
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-                {/* Branch Info */}
                 <div className="lg:col-span-2 p-8">
                   <div className="flex items-start justify-between mb-6">
                     <div>
@@ -318,19 +298,17 @@ const Branches = () => {
                 {/* Facilities & Stats */}
                 <div className="bg-accent p-8">
                   <div className="space-y-6">
-                    {/* Stats */}
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="text-center">
+                    <div className="grid grid-cols-2 gap-4 text-center">
+                      <div>
                         <div className="text-2xl font-bold text-primary">{branch.students}</div>
                         <div className="text-xs text-muted-foreground">Students</div>
                       </div>
-                      <div className="text-center">
+                      <div>
                         <div className="text-2xl font-bold text-secondary">{branch.courses.length}</div>
                         <div className="text-xs text-muted-foreground">Courses</div>
                       </div>
                     </div>
 
-                    {/* Facilities */}
                     <div>
                       <h3 className="font-semibold mb-3">Facilities</h3>
                       <ul className="space-y-2">
@@ -343,44 +321,18 @@ const Branches = () => {
                       </ul>
                     </div>
 
-                    {/* Action Buttons */}
                     <div className="space-y-3">
                       <Button className="w-full" asChild>
                         <Link to="/contact">Contact This Branch</Link>
                       </Button>
-                      <Button 
-                        variant="outline" 
-                        className="w-full border-primary-foreground text-black hover:bg-gray-200 hover:text-black" 
-                        asChild
-                      >
-                        <a 
-                          href={`https://maps.google.com/?q=${encodeURIComponent(branch.address)}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2"
-                        >
+                      <Button variant="outline" className="w-full border-primary-foreground text-black hover:bg-gray-200 hover:text-black" asChild>
+                        <a href={`https://maps.google.com/?q=${encodeURIComponent(branch.address)}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                           <ExternalLink className="h-4 w-4" />
                           Get Directions
                         </a>
                       </Button>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              {/* Campus Gallery */}
-              <div className="p-6 bg-accent">
-                <h3 className="font-semibold mb-4">Campus Gallery</h3>
-                <div className="grid grid-cols-3 gap-4">
-                  {branch.galleryImages.map((image, idx) => (
-                    <div key={idx} className="relative aspect-video overflow-hidden rounded-lg">
-                      <img 
-                        src={image} 
-                        alt={`${branch.name} facility ${idx + 1}`}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  ))}
                 </div>
               </div>
             </Card>
@@ -399,18 +351,8 @@ const Branches = () => {
                 <Button size="lg" variant="secondary" asChild>
                   <Link to="/contact">Schedule a Visit</Link>
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="border-primary-foreground text-black hover:bg-gray-200 hover:text-black"
-                  asChild
-                >
-                  <a 
-                    href="https://maps.google.com/?q=Sri+Gayatri+Junior+College+Visakhapatnam"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
+                <Button size="lg" variant="outline" className="border-primary-foreground text-black hover:bg-gray-200 hover:text-black" asChild>
+                  <a href="https://maps.google.com/?q=Sri+Gayatri+Junior+College+Visakhapatnam" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                     <ExternalLink className="h-4 w-4" />
                     Get Directions
                   </a>

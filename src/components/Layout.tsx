@@ -128,15 +128,15 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <h4 className="font-semibold mb-4">Contact Info</h4>
               <div className="space-y-2 text-sm opacity-90">
                 <p>Visakhapatnam, Andhra Pradesh</p>
-                <p>Phone: +91 XXXXX XXXXX</p>
-                <p>Email: info@srigayatrijc.edu.in</p>
+                <p>Phone: +91 93468 73728</p>
+                <p>Email: info@srigayatri.co.in</p>
               </div>
             </div>
           </div>
 
           <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
             <p className="text-sm opacity-90">
-              © 2024 Sri Gayatri Junior College. All rights reserved.
+              © 2025 Sri Gayatri Junior College. All rights reserved.
             </p>
           </div>
         </div>
