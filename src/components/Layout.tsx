@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
 
   const logoUrl =
-    "https://firebasestorage.googleapis.com/v0/b/sri-gayatri-junior-college/o/Logo.png?alt=media&token=6e218668-b109-4b7a-82ad-916f3363de9b";
+    "src/assets/Gayatri Logo.png";
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -28,7 +28,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <img src={logoUrl} alt="Sri Gayatri Logo" className="h-8 w-8" />
+              <img src={logoUrl} alt="Sri Gayatri Logo" className="h-12 w-12" />
               <div className="flex flex-col">
                 <span className="font-bold text-lg text-foreground">Sri Gayatri</span>
                 <span className="text-sm text-muted-foreground -mt-1">Junior College</span>
@@ -96,7 +96,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <img src={logoUrl} alt="Sri Gayatri Logo" className="h-8 w-8" />
+                <img src={logoUrl} alt="Sri Gayatri Logo" className="h-12 w-12" />
                 <div>
                   <h3 className="font-bold text-lg">Sri Gayatri Junior College</h3>
                   <p className="text-sm opacity-90">Excellence in Education</p>

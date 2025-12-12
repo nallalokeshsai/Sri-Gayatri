@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import { GraduationCap, Users, MapPin, BookOpen, Award, Star } from "lucide-react";
 import heroImage from "@/assets/venkateswara-campus.jpg";
 import studentsImage from "@/assets/students-study.jpg";
+import libraryImage from "@/assets/library-interior.jpg"
+import scienceLabImage from "@/assets/science-lab.jpg"
+import messImage from "@/assets/cafeteria.jpg"
 
 const Home = () => {
   const stats = [
@@ -182,17 +185,17 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { 
-                image: "https://firebasestorage.googleapis.com/v0/b/sri-gayatri-junior-college/o/Library.jpg?alt=media&token=d1d4d596-35a5-442f-8355-6a16c8f8f26d", 
+                image: libraryImage, 
                 title: "Library", 
                 desc: "Extensive collection with digital resources" 
               },
               { 
-                image: "https://firebasestorage.googleapis.com/v0/b/sri-gayatri-junior-college/o/Lab.jpg?alt=media&token=c4c16572-c670-437e-b64a-e4b62a7003ec", 
+                image: scienceLabImage, 
                 title: "Science Labs", 
                 desc: "Well-equipped laboratories for hands-on learning" 
               },
               { 
-                image: "https://firebasestorage.googleapis.com/v0/b/sri-gayatri-junior-college/o/Hostel.jpg?alt=media&token=a126440d-168c-42a0-bd27-878af7c9ff19", 
+                image: messImage, 
                 title: "Mess", 
                 desc: "Hygienic dining facilities with nutritious meals" 
               }

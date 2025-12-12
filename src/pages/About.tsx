@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Target, Eye, Award, Users, BookOpen, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import directorImage from "@/assets/Naidu photo.jpg"
 
 const About = () => {
   const achievements = [
@@ -185,9 +186,9 @@ const About = () => {
               <CardContent className="p-12">
                 <div className="flex justify-center mb-8">
                   <img
-                    src="https://firebasestorage.googleapis.com/v0/b/portfolio-template-t2zhmi.firebasestorage.app/o/Naidu%20Sir.jpg?alt=media&token=924862df-340c-4a36-88d7-bf1c9e58105f"
+                    src={directorImage}
                     alt="Mr. N.A. Naidu, Director"
-                    className="w-32 h-32 rounded-full object-cover border-4 border-primary-foreground"
+                    className="w-64 h-64 rounded-full object-cover object-[0_20%] border-4 border-primary-foreground"
                   />
                 </div>
                 <h2 className="text-3xl font-bold mb-6">Director's Message</h2>
