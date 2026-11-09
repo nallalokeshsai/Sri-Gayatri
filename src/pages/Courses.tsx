@@ -1,270 +1,320 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { 
-  Calculator, 
-  Microscope, 
-  TrendingUp, 
-  Scale, 
+import {
+  GraduationCap,
   BookOpen,
+  Microscope,
+  Calculator,
+  TrendingUp,
+  Scale,
   Clock,
-  Users,
-  Target
+  Award,
+  CheckCircle2,
+  ArrowRight,
+  ShieldCheck,
+  Calendar,
 } from "lucide-react";
-import scienceLabImage from "@/assets/science-lab.jpg";
-import computerLabImage from "@/assets/computer-lab.jpg";
-import bipcImage from "@/assets/doctors.jpg";
-import cecImage from "@/assets/cec.jpg";
+import { COURSES_DATA, COLLEGE_DETAILS } from "@/data/collegeData";
+import { useLayout } from "@/context/LayoutContext";
 
+export const Courses = () => {
+  const { openAdmissionModal } = useLayout();
+  const [selectedCourseId, setSelectedCourseId] = useState("mpc");
 
-const Courses = () => {
-  const courses = [
-    {
-      id: "mpc",
-      name: "MPC",
-      fullName: "Mathematics, Physics, Chemistry",
-      icon: Calculator,
-      color: "bg-primary",
-      subjects: ["Mathematics", "Physics", "Chemistry", "English"],
-      duration: "2 Years",
-      description: "Ideal for students aspiring for engineering and technology careers",
-      careerPaths: ["Engineering", "Technology", "Research", "Data Science", "Architecture"],
-      highlights: [
-        "Advanced Mathematics concepts",
-        "Comprehensive Physics practicals",
-        "Modern Chemistry laboratory",
-        "Engineering entrance preparation"
-      ],
-      image: scienceLabImage // Relevant for engineering (physics/chemistry lab)
-    },
-    {
-      id: "bipc",
-      name: "BiPC",
-      fullName: "Biology, Physics, Chemistry",
-      icon: Microscope,
-      color: "bg-secondary",
-      subjects: ["Biology", "Physics", "Chemistry", "English"],
-      duration: "2 Years",
-      description: "Perfect foundation for medical and life sciences careers",
-      careerPaths: ["Medicine", "Dentistry", "Pharmacy", "Biotechnology", "Veterinary Science"],
-      highlights: [
-        "Comprehensive Biology curriculum",
-        "Advanced laboratory facilities",
-        "Medical entrance coaching",
-        "Research-oriented approach"
-      ],
-      image: bipcImage // Relevant for medicine (biology/chemistry lab)
-    },
-    {
-      id: "mec",
-      name: "MEC",
-      fullName: "Mathematics, Economics, Commerce",
-      icon: TrendingUp,
-      color: "bg-primary",
-      subjects: ["Mathematics", "Economics", "Commerce", "English"],
-      duration: "2 Years",
-      description: "Gateway to business, economics, and analytical careers",
-      careerPaths: ["Business Administration", "Economics", "Chartered Accountancy", "Banking", "Finance"],
-      highlights: [
-        "Business Mathematics",
-        "Economic theory and practice",
-        "Commercial applications",
-        "Entrepreneurship development"
-      ],
-      image: computerLabImage // Relevant for economics/commerce (business analytics)
-    },
-    {
-      id: "cec",
-      name: "CEC",
-      fullName: "Civics, Economics, Commerce",
-      icon: Scale,
-      color: "bg-secondary",
-      subjects: ["Civics", "Economics", "Commerce", "English"],
-      duration: "2 Years",
-      description: "Foundation for civil services and social sciences",
-      careerPaths: ["Civil Services", "Law", "Journalism", "Social Work", "Public Administration"],
-      highlights: [
-        "Constitutional studies",
-        "Public administration",
-        "Social economics",
-        "Current affairs focus"
-      ],
-      image: cecImage // Less relevant for civics; replace with a library or classroom image for civics/law
-    }
-  ];
-
-  const commonFeatures = [
-    {
-      icon: BookOpen,
-      title: "Comprehensive Curriculum",
-      description: "Updated syllabus aligned with state board requirements"
-    },
-    {
-      icon: Users,
-      title: "Expert Faculty",
-      description: "Experienced teachers with subject specialization"
-    },
-    {
-      icon: Target,
-      title: "Exam Preparation",
-      description: "Regular tests and entrance exam coaching"
-    },
-    {
-      icon: Clock,
-      title: "Flexible Timings",
-      description: "Morning and afternoon batches available"
-    }
-  ];
+  const currentCourse = COURSES_DATA.find((c) => c.id === selectedCourseId) || COURSES_DATA[0];
 
   return (
-    <div className="min-h-screen py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-foreground mb-6">Our Courses</h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Choose from our comprehensive range of intermediate programs designed to prepare you 
-            for higher education and professional success.
+    <div className="w-full font-sans text-slate-800">
+      {/* 1. PAGE HEADER */}
+      <section className="bg-oxford-950 text-white py-12 sm:py-16 px-4 sm:px-6 border-b border-gold-500">
+        <div className="max-w-7xl mx-auto space-y-3">
+          <div className="flex items-center gap-2 text-xs text-gold-400 font-medium">
+            <Link to="/" className="hover:underline">Home</Link>
+            <span>/</span>
+            <span className="text-slate-300">Academics</span>
+            <span>/</span>
+            <span className="text-white">Intermediate Streams (MPC, BiPC, MEC, CEC)</span>
+          </div>
+
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white tracking-tight">
+            Academic Streams & Integrated Syllabi
+          </h1>
+          <p className="text-xs sm:text-sm text-slate-300 max-w-3xl leading-relaxed">
+            Recognized by the Board of Intermediate Education, Andhra Pradesh (BIEAP). Every stream synchronizes official board scoring mastery with national competitive entrance preparation.
           </p>
         </div>
+      </section>
 
-        {/* Course Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-          {courses.map((course, index) => (
-            <Card key={course.id} className="shadow-card overflow-hidden">
-              <div className="relative h-48">
-                <img 
-                  src={course.image} 
-                  alt={course.name}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black/40" />
-                <div className="absolute top-4 left-4">
-                  <div className={`${course.color} text-white p-3 rounded-lg`}>
-                    <course.icon className="h-8 w-8" />
+      {/* 2. INTERACTIVE STREAM SELECTOR TABS */}
+      <section className="py-8 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {COURSES_DATA.map((course) => {
+              const isSelected = selectedCourseId === course.id;
+              return (
+                <button
+                  key={course.id}
+                  onClick={() => setSelectedCourseId(course.id)}
+                  className={`p-4 rounded border text-left transition-all ${
+                    isSelected
+                      ? "bg-oxford-900 text-white border-gold-500 shadow-md"
+                      : "bg-[#F9FAFB] text-slate-800 border-slate-200 hover:border-slate-400"
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className={`text-xl font-serif font-bold ${isSelected ? "text-gold-300" : "text-oxford-950"}`}>
+                      {course.name}
+                    </span>
+                    <span className={`text-[10px] uppercase font-semibold px-2 py-0.5 rounded ${
+                      isSelected ? "bg-white/10 text-gold-300" : "bg-slate-200 text-slate-700"
+                    }`}>
+                      2 Years
+                    </span>
+                  </div>
+                  <span className={`text-xs block mt-1 line-clamp-1 ${isSelected ? "text-slate-300" : "text-slate-500"}`}>
+                    {course.fullName}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. ACTIVE STREAM DEEP DIVE */}
+      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-[#F9FAFB] border-b border-slate-200">
+        <div className="max-w-7xl mx-auto space-y-10">
+          {/* Main stream intro */}
+          <div className="bg-white border border-slate-200 rounded-lg p-6 sm:p-8 shadow-sm">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-8 space-y-4">
+                <div className="inline-flex items-center gap-2 bg-oxford-50 border border-oxford-200 text-oxford-900 text-xs px-2.5 py-1 rounded font-medium">
+                  <ShieldCheck className="w-3.5 h-3.5 text-gold-600" />
+                  <span>BIEAP Syllabus + Synchronized Entrance Track</span>
+                </div>
+
+                <div className="space-y-1">
+                  <h2 className="text-2xl sm:text-3xl font-serif font-bold text-oxford-950">
+                    {currentCourse.name}: {currentCourse.fullName}
+                  </h2>
+                  <p className="text-xs sm:text-sm text-gold-700 font-semibold">
+                    {currentCourse.tagline}
+                  </p>
+                </div>
+
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  {currentCourse.description}
+                </p>
+
+                {/* Integrated Entrance Badges */}
+                <div className="space-y-2 pt-2">
+                  <span className="text-xs font-semibold text-slate-700 uppercase tracking-wider block">
+                    Parallel Competitive Entrances Covered:
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {currentCourse.integratedCoaching.map((exam, i) => (
+                      <span
+                        key={i}
+                        className="bg-oxford-50 border border-oxford-200 text-oxford-900 text-xs px-3 py-1 rounded font-medium"
+                      >
+                        {exam}
+                      </span>
+                    ))}
                   </div>
                 </div>
-                <div className="absolute bottom-4 left-4">
-                  <h3 className="text-3xl font-bold text-white">{course.name}</h3>
-                  <p className="text-white/90">{course.fullName}</p>
+
+                {/* Apply Button */}
+                <div className="pt-3 flex flex-wrap gap-3">
+                  <button
+                    onClick={() => openAdmissionModal(currentCourse.id)}
+                    className="px-5 py-2.5 bg-oxford-900 hover:bg-oxford-800 text-white rounded text-xs font-semibold shadow transition-colors flex items-center gap-1.5"
+                  >
+                    <span>Apply for {currentCourse.name} Stream</span>
+                    <ArrowRight className="w-4 h-4 text-gold-400" />
+                  </button>
                 </div>
               </div>
-              
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <Badge variant="outline">{course.duration}</Badge>
-                  <Badge variant="outline">{course.subjects.length} Subjects</Badge>
-                </div>
-                
-                <p className="text-muted-foreground mb-6">{course.description}</p>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold mb-3">Subjects:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {course.subjects.map((subject, idx) => (
-                      <Badge key={idx} variant="secondary">{subject}</Badge>
-                    ))}
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold mb-3">Course Highlights:</h4>
-                  <ul className="space-y-2">
-                    {course.highlights.map((highlight, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                        {highlight}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold mb-3">Career Paths:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {course.careerPaths.map((career, idx) => (
-                      <Badge key={idx} variant="outline" className="text-xs">{career}</Badge>
-                    ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
 
-        {/* Common Features */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
-            What Makes Our Courses Special
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {commonFeatures.map((feature, index) => (
-              <Card key={index} className="text-center shadow-card">
-                <CardContent className="p-6">
-                  <feature.icon className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+              {/* Stream Image */}
+              <div className="lg:col-span-4">
+                <div className="rounded-lg overflow-hidden border border-slate-200 shadow-sm">
+                  <img
+                    src={currentCourse.image}
+                    alt={currentCourse.fullName}
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="p-3 bg-slate-50 text-center text-xs text-slate-500 font-medium">
+                    Hands-on Academic Training at Sri Gayatri
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </section>
 
-        {/* Admission Process */}
-        <section className="mb-20">
-          <Card className="shadow-card bg-accent">
-            <CardHeader>
-              <CardTitle className="text-2xl text-center">Admission Process</CardTitle>
-            </CardHeader>
-            <CardContent className="p-8">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                {[
-                  { step: "1", title: "Application", desc: "Submit online or offline application form" },
-                  { step: "2", title: "Documents", desc: "Provide SSC marks memo and other certificates" },
-                  { step: "3", title: "Counseling", desc: "Attend counseling session for course selection" },
-                  { step: "4", title: "Enrollment", desc: "Complete fee payment and enrollment process" }
-                ].map((item, index) => (
-                  <div key={index} className="text-center">
-                    <div className="bg-primary text-primary-foreground w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                      {item.step}
-                    </div>
-                    <h3 className="font-semibold mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm">{item.desc}</p>
+          {/* Subjects & Curriculum Breakdown */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Left: Subjects */}
+            <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm space-y-4">
+              <h3 className="text-base font-serif font-bold text-oxford-950 flex items-center gap-2 border-b border-slate-100 pb-3">
+                <BookOpen className="w-4 h-4 text-gold-600" />
+                <span>Core Subjects & Conceptual Focus</span>
+              </h3>
+
+              <div className="space-y-3">
+                {currentCourse.subjects.map((sub, i) => (
+                  <div key={i} className="bg-slate-50 p-3.5 rounded border border-slate-100 space-y-1">
+                    <span className="font-serif font-bold text-xs text-oxford-950 block">
+                      {sub.name}
+                    </span>
+                    <p className="text-xs text-slate-600">
+                      {sub.focus}
+                    </p>
                   </div>
                 ))}
               </div>
-            </CardContent>
-          </Card>
-        </section>
+            </div>
 
-        {/* CTA Section */}
-        <section className="py-20 text-center">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Card className="shadow-card bg-primary text-primary-foreground">
-              <CardContent className="p-12">
-                <h2 className="text-3xl font-bold mb-6">Ready to Begin Your Journey?</h2>
-                <p className="text-xl mb-8 opacity-90">
-                  Choose the right course for your future and join thousands of successful students
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" variant="secondary" asChild>
-                    <Link to="/contact">Apply Now</Link>
-                  </Button>
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-primary-foreground text-black hover:bg-gray-200 hover:text-black" 
-                    asChild
-                  >
-                    <Link to="/branches">Visit a Branch</Link>
-                  </Button>
+            {/* Right: Key Highlights & Weekly Hours */}
+            <div className="space-y-6">
+              <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm space-y-4">
+                <h3 className="text-base font-serif font-bold text-oxford-950 flex items-center gap-2 border-b border-slate-100 pb-3">
+                  <Clock className="w-4 h-4 text-gold-600" />
+                  <span>Weekly Academic Distribution</span>
+                </h3>
+
+                <div className="grid grid-cols-3 gap-3 text-center">
+                  <div className="bg-slate-50 p-3 rounded border border-slate-100">
+                    <span className="text-xs font-bold text-oxford-900 block font-serif">Lectures</span>
+                    <span className="text-xs text-slate-600 mt-1 block">
+                      {currentCourse.weeklyHours.lectures}
+                    </span>
+                  </div>
+                  <div className="bg-slate-50 p-3 rounded border border-slate-100">
+                    <span className="text-xs font-bold text-oxford-900 block font-serif">Labs / Work</span>
+                    <span className="text-xs text-slate-600 mt-1 block">
+                      {currentCourse.weeklyHours.practicals}
+                    </span>
+                  </div>
+                  <div className="bg-slate-50 p-3 rounded border border-slate-100">
+                    <span className="text-xs font-bold text-oxford-900 block font-serif">Study Hours</span>
+                    <span className="text-xs text-slate-600 mt-1 block">
+                      {currentCourse.weeklyHours.studyHours}
+                    </span>
+                  </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg border border-slate-200 shadow-sm space-y-3">
+                <h3 className="text-base font-serif font-bold text-oxford-950 flex items-center gap-2 border-b border-slate-100 pb-3">
+                  <Award className="w-4 h-4 text-gold-600" />
+                  <span>Pedagogical Highlights</span>
+                </h3>
+                <ul className="space-y-2 text-xs text-slate-600">
+                  {currentCourse.highlights.map((h, i) => (
+                    <li key={i} className="flex items-start gap-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>{h}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
-        </section>
-      </div>
+
+          {/* Prospective Career Paths */}
+          <div className="bg-white p-6 sm:p-8 rounded-lg border border-slate-200 shadow-sm space-y-4">
+            <h3 className="text-base font-serif font-bold text-oxford-950 border-b border-slate-100 pb-3">
+              Higher Education & Career Avenues Unlocked by {currentCourse.name}
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+              {currentCourse.careerPaths.map((career, i) => (
+                <div
+                  key={i}
+                  className="bg-slate-50 p-3 rounded border border-slate-100 text-xs text-slate-700 flex items-center gap-2"
+                >
+                  <span className="w-2 h-2 bg-oxford-800 rounded-full shrink-0"></span>
+                  <span>{career}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. DAILY TIMETABLE BREAKDOWN */}
+      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-white border-b border-slate-200">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <div className="text-center space-y-2">
+            <span className="text-xs font-serif uppercase tracking-widest text-gold-700 font-bold block">
+              Daily Academic Routine
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-oxford-950">
+              A Balanced Day at Sri Gayatri
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600">
+              How our schedule prevents exhaustion while achieving top board and entrance ranks.
+            </p>
+          </div>
+
+          <div className="border border-slate-200 rounded-lg overflow-hidden divide-y divide-slate-100 text-xs sm:text-sm">
+            <div className="p-4 bg-slate-50 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <span className="font-mono font-bold text-oxford-900 sm:w-36">8:00 AM – 8:30 AM</span>
+              <span className="font-semibold text-slate-800 sm:w-48">Morning Assembly & Revision</span>
+              <span className="text-slate-600 sm:flex-1">Formula review, previous day error correction log, and daily attendance recording.</span>
+            </div>
+
+            <div className="p-4 bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <span className="font-mono font-bold text-oxford-900 sm:w-36">8:30 AM – 1:00 PM</span>
+              <span className="font-semibold text-slate-800 sm:w-48">Core Academic Lectures</span>
+              <span className="text-slate-600 sm:flex-1">Deep conceptual teaching covering BIEAP textbook chapters, derivations, and board theory.</span>
+            </div>
+
+            <div className="p-4 bg-slate-50 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <span className="font-mono font-bold text-oxford-900 sm:w-36">1:00 PM – 1:45 PM</span>
+              <span className="font-semibold text-slate-800 sm:w-48">Nutritious Lunch Break</span>
+              <span className="text-slate-600 sm:flex-1">Wholesome vegetarian meal in campus dining hall or day-scholar lunch break.</span>
+            </div>
+
+            <div className="p-4 bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <span className="font-mono font-bold text-oxford-900 sm:w-36">1:45 PM – 3:30 PM</span>
+              <span className="font-semibold text-slate-800 sm:w-48">Laboratory & Applied Problems</span>
+              <span className="text-slate-600 sm:flex-1">Hands-on science experiments, specimen practicals, or entrance level MCQ application workshops.</span>
+            </div>
+
+            <div className="p-4 bg-slate-50 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <span className="font-mono font-bold text-oxford-900 sm:w-36">3:30 PM – 5:30 PM</span>
+              <span className="font-semibold text-slate-800 sm:w-48">Supervised Study & Doubts</span>
+              <span className="text-slate-600 sm:flex-1">Daily Practice Papers (DPP) worked out with senior subject faculty present in the room to clear doubts immediately.</span>
+            </div>
+
+            <div className="p-4 bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <span className="font-mono font-bold text-oxford-900 sm:w-36">8:00 PM – 10:30 PM</span>
+              <span className="font-semibold text-slate-800 sm:w-48">Residential Evening Study</span>
+              <span className="text-slate-600 sm:flex-1">(For hostel residents) Supervised silent reading and preparation for next morning's evaluation test.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. ADMISSION BANNER */}
+      <section className="bg-oxford-900 text-white py-12 sm:py-16 px-4 sm:px-6 text-center">
+        <div className="max-w-3xl mx-auto space-y-4">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white">
+            Ready to Select Your Academic Stream?
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Our experienced counselors will help evaluate your 10th class aptitudes to choose between MPC, BiPC, MEC, and CEC.
+          </p>
+          <div className="pt-2">
+            <button
+              onClick={() => openAdmissionModal(selectedCourseId)}
+              className="px-6 py-3 bg-gold-500 hover:bg-gold-600 text-oxford-950 font-bold rounded text-xs sm:text-sm shadow transition-colors"
+            >
+              Apply Online for 2026–27
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
